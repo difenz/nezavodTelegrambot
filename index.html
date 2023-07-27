@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="logo"><img src="src/nezavod_logo.svg" alt=""></div>
+<!-- Control buttons -->
+<div class="cart">
+    <a class="button delivery modal-button" href="#myModal4"></a>
+    <!-- <img src="src/cart.svg" alt="cart image"> -->
+</div>
+
+<div id="myBtnContainer">
+    <div class="first-row">
+    <button class="btn1 active" onclick="filterSelection('all')">ВСЕ</button>
+    <button class="btn1" onclick="filterSelection('xylinet')">XYLINET?</button>
+    <button class="btn1" onclick="filterSelection('achonet')">АЧОНЕТ</button>
+    <button class="btn1" onclick="filterSelection('ma')">МА</button>
+    </div>
+    <div class="second-row">
+    <button class="btn1" onclick="filterSelection('titans')">ЯРОСТЬ ТИТАНОВ</button>
+    <button class="btn1" onclick="filterSelection('prosto')">ПРОСТО/НЕПРОСТО</button>
+    <button class="btn1" onclick="filterSelection('cold')">XYLINET <span class="cold">COLD</span></button>
+    </div>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+    <div class="blocks">
+    <div class="filterDiv cold" data-id="xylinetcoconut">
+        <img class="product-image" src="src/cold/ananac.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Кокосовый <br> Блоуджоб</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+        <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+        <p id="counter50" data-counter>0</p>
+        <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+        </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv cold" data-id="xylinetcherry">
+        <img class="product-image" src="src/cold/cherrylime.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Вишня <br> Лайм</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinetgrapefruit">
+        <img class="product-image" src="src/cold/grapefruit.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Грейпфрут <br> Иринг</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinetmint">
+        <img class="product-image" src="src/cold/mintmenthol.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Ментол <br> Мята</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinetstrawberry">
+        <img class="product-image" src="src/cold/strawberrylichi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Клубника <br> Личи</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardcoconut">
+        <img class="product-image" src="src/cold/ananac.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Кокосовый <br> Блоуджоб</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardcherry">
+        <img class="product-image" src="src/cold/cherrylime.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Вишня <br> Лайм</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardgrapefruit">
+        <img class="product-image" src="src/cold/grapefruit.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Грейпфрут <br> Иринг</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardmint">
+        <img class="product-image" src="src/cold/mintmenthol.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ментол <br> Мята</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardstrawberry">
+        <img class="product-image" src="src/cold/strawberrylichi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Клубника <br> Личи</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv ma" data-id="mavkussevenhard">
+        <img class="product-image MA-image" src="src/MA/hard/vkussevenhare.png" alt="">
+        <h2 class="block__title pre-title">Михаил Аркадьевич <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Вкус №7</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv ma" data-id="matonirovkahard">
+        <img class="product-image MA-image" src="src/MA/hard/hardtonirovka.png" alt="">
+        <h2 class="block__title pre-title">Михаил Аркадьевич <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Тонировка 5%</h1>
+        <h1 class="price">350Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    </div>
+</div>
+
+<div class="contentt">
+    <div id="myModal4" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>ЗАКАЗ</h3>
+          <span class="close">X<i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-4">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title none">Ваш заказ</h4>
+                          <div data-cart-empty class="alert alert-secondary" role="alert">
+                          Корзина пуста
+                      </div>
+                      <div class="cart-wrapper">
+                         
+                      </div>
+                      <div class="cart-total none">
+                          <p data-cart-delivery>
+                              <span class="h5">Минимальная сумма заказа: </span>
+                              <span class="delivery-cost">20.000₽</span><br>
+                              <span class="small">Скидка на первый заказ 5%</span>
+                          </p>
+                          <p><span class="h5">Итого:</span>
+                              <span class="total-price">0</span>
+                              <span class="rouble">₽</span></p>
+                      </div>
+                  </div>
+                  <div id="order-form" class="card-body border-top none">
+                      <h5 class="card-title">Оформить заказ</h4>
+                      <form id="telegram">
+                          <div class="form-group">
+                              <input type="text" name="name" class="form-control" placeholder="Имя">
+                              <input type="text" name="phone" class="form-control" placeholder="Номер телефона +7">
+                              <input type="text" name="telegram" class="form-control" placeholder="Ваш telegram">
+                          </div>
+                          <button id="submitButton" type="submit" class="btn btn-primary">Заказать</button>
+                      </form>
+                  </div>
+              </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+<script src="js/calcCartPrice.js"></script>
+<script src="js/toggleCart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart02.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script>
+
+  
+  const TOKEN = '6075047459:AAFUabT_pq2kLC2bIfr6z3Gj_LMU21KcDjI';
+  const CHAT_ID = '-1001940028905'
+  const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`
+
+  document.getElementById('telegram').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let message = `<b>Заявка с бота НЕЗАВОД</b>\n`;
+      message += `<b>Отправитель:</b> ${this.name.value}\n`;
+      message += `<b>Номер отправителя:</b> ${this.phone.value}\n`;
+      message += `<b>Ник в телеграмме:</b> ${this.telegram.value}\n`;
+      telegram.reset();  // Reset all form data
+
+      axios.post(URL_API, {
+          chat_id: CHAT_ID,
+          parse_mode: 'html',
+          text: message
+      })
+  })
+
+</script>
+</body>
+</html>

@@ -225,9 +225,9 @@
                           <div class="form-group">
                               <input type="text" name="name" class="form-control" placeholder="Имя">
                               <input type="text" name="phone" class="form-control" placeholder="Номер телефона +7">
-                              <input type="text" name="telegram" class="form-control" placeholder="Ваш telegram">
+                              <input type="text" name="telegram" class="form-control" placeholder="Ваш telegram через @">
                           </div>
-                          <button id="submitButton" type="submit" class="btn btn-primary">Заказать</button>
+                          <button id="submitButton" type="submit" class="submitbtn btn-primary" click="">Заказать</button>
                       </form>
                   </div>
               </div>
@@ -236,38 +236,10 @@
       </div>
     </div>
   </div>
-
-
 <script src="js/calcCartPrice.js"></script>
 <script src="js/toggleCart.js"></script>
 <script src="js/main.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/cart02.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-<script>
-
-  
-  const TOKEN = '6075047459:AAFUabT_pq2kLC2bIfr6z3Gj_LMU21KcDjI';
-  const CHAT_ID = '-1001940028905'
-  const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`
-
-  document.getElementById('telegram').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      let message = `<b>Заявка с бота НЕЗАВОД</b>\n`;
-      message += `<b>Отправитель:</b> ${this.name.value}\n`;
-      message += `<b>Номер отправителя:</b> ${this.phone.value}\n`;
-      message += `<b>Ник в телеграмме:</b> ${this.telegram.value}\n`;
-      telegram.reset();  // Reset all form data
-
-      axios.post(URL_API, {
-          chat_id: CHAT_ID,
-          parse_mode: 'html',
-          text: message
-      })
-  })
-
-</script>
 </body>
 </html>

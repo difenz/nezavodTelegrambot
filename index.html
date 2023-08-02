@@ -641,6 +641,19 @@
                           <button id="submitButton" type="submit" class="submitbtn btn-primary" click="">Заказать</button>
                       </form>
                   </div>
+                  <script>
+  // Получаем ссылку на форму
+  const form = document.getElementById('myForm');
+
+  // Добавляем обработчик события для каждого поля ввода
+  const formInputs = form.querySelectorAll('input, textarea');
+  formInputs.forEach((input) => {
+    input.addEventListener('blur', () => {
+      // Скрываем клавиатуру после потери фокуса (blur) с поля ввода
+      document.activeElement.blur();
+    });
+  });
+</script>
               </div>
         </div>
   
